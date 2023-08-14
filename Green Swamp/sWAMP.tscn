@@ -1,0 +1,868 @@
+[gd_scene load_steps=76 format=2]
+
+[ext_resource path="res://Player/Player back up 2.0.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Green Swamp/tile (1).png" type="Texture" id=4]
+[ext_resource path="res://Green Swamp/tile (4).png" type="Texture" id=5]
+[ext_resource path="res://Green Swamp/tile (3).png" type="Texture" id=6]
+[ext_resource path="res://Green Swamp/tile (5).png" type="Texture" id=7]
+[ext_resource path="res://Green Swamp/tile(2).png" type="Texture" id=8]
+[ext_resource path="res://Effects/Ocean-Sheet.png" type="Texture" id=9]
+[ext_resource path="res://Green Swamp/tile (6).png" type="Texture" id=10]
+[ext_resource path="res://Battle/Platform 2.png" type="Texture" id=11]
+[ext_resource path="res://Lighting/Orb Green Boss.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Attack/Acid drop-Sheet.png" type="Texture" id=13]
+[ext_resource path="res://Enemies/Green Fly.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Green Swamp/Exit SWAMP.gd" type="Script" id=15]
+[ext_resource path="res://Green Swamp/Entrance Swamp.gd" type="Script" id=16]
+[ext_resource path="res://Music/water-splosh-38143.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Music/cave-of-light-13566(1).mp3" type="AudioStream" id=18]
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 9 )
+region = Rect2( 888, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 9 )
+region = Rect2( 1776, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 9 )
+region = Rect2( 2664, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 9 )
+region = Rect2( 3552, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 9 )
+region = Rect2( 4440, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 9 )
+region = Rect2( 5328, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 9 )
+region = Rect2( 6216, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 9 )
+region = Rect2( 7104, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 9 )
+region = Rect2( 7992, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 9 )
+region = Rect2( 8880, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 9 )
+region = Rect2( 9768, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 9 )
+region = Rect2( 10656, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 9 )
+region = Rect2( 11544, 0, 888, 74 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "Water",
+"speed": 12.0
+} ]
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 13 )
+region = Rect2( 1120, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 13 )
+region = Rect2( 1232, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 13 )
+region = Rect2( 1344, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 13 )
+region = Rect2( 1456, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 13 )
+region = Rect2( 1568, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 13 )
+region = Rect2( 1680, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 13 )
+region = Rect2( 1792, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 13 )
+region = Rect2( 1904, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 13 )
+region = Rect2( 2016, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 13 )
+region = Rect2( 2128, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 13 )
+region = Rect2( 2240, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 13 )
+region = Rect2( 2352, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 13 )
+region = Rect2( 2464, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 13 )
+region = Rect2( 2576, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 13 )
+region = Rect2( 2688, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 13 )
+region = Rect2( 2800, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 13 )
+region = Rect2( 2912, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 13 )
+region = Rect2( 3024, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 13 )
+region = Rect2( 3136, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 13 )
+region = Rect2( 3248, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 13 )
+region = Rect2( 3360, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 13 )
+region = Rect2( 3472, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 13 )
+region = Rect2( 3584, 0, 112, 477 )
+
+[sub_resource type="SpriteFrames" id=66]
+animations = [ {
+"frames": [ SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 65 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 9 )
+region = Rect2( 888, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 9 )
+region = Rect2( 1776, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 9 )
+region = Rect2( 2664, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 9 )
+region = Rect2( 3552, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 9 )
+region = Rect2( 4440, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 9 )
+region = Rect2( 5328, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 9 )
+region = Rect2( 6216, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 9 )
+region = Rect2( 7104, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 9 )
+region = Rect2( 7992, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 9 )
+region = Rect2( 8880, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 9 )
+region = Rect2( 9768, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 9 )
+region = Rect2( 10656, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 9 )
+region = Rect2( 11544, 0, 888, 74 )
+
+[sub_resource type="SpriteFrames" id=67]
+animations = [ {
+"frames": [ SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
+"loop": true,
+"name": "Water",
+"speed": 12.0
+} ]
+
+[sub_resource type="Environment" id=68]
+background_mode = 4
+fog_enabled = true
+fog_color = Color( 0.501961, 0.6, 0.701961, 1 )
+glow_enabled = true
+glow_intensity = 2.08
+glow_strength = 0.91
+glow_blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id=83]
+extents = Vector2( 10, 26.4286 )
+
+[sub_resource type="RectangleShape2D" id=84]
+extents = Vector2( 274.012, 10 )
+
+[node name="Hallway Swamp" type="Node2D"]
+scale = Vector2( 0.671504, 0.56 )
+
+[node name="Player2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -3023.06, 164.286 )
+scale = Vector2( 1.52823, 1.78571 )
+
+[node name="Camera2D" parent="Player2" instance=ExtResource( 2 )]
+position = Vector2( 7, -8 )
+scale = Vector2( 3.27804, 5.44 )
+limit_left = -10000
+limit_top = -10000
+limit_right = 10000
+limit_bottom = 10000
+limit_smoothed = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 61.0
+margin_bottom = 15.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.25098, 0.764706, 0.168627, 1 )
+position = Vector2( -2522.91, -261.625 )
+scale = Vector2( 2.44125, 26.3074 )
+frames = SubResource( 15 )
+animation = "Water"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+modulate = Color( 0.25098, 0.764706, 0.168627, 1 )
+position = Vector2( -735.662, -321.429 )
+scale = Vector2( 1.63176, 28.5388 )
+frames = SubResource( 15 )
+animation = "Water"
+frame = 1
+playing = true
+
+[node name="Platforms" type="Node2D" parent="."]
+modulate = Color( 0.713726, 1, 0.698039, 1 )
+
+[node name="Tile(5)" type="Sprite" parent="Platforms"]
+position = Vector2( -912, 158 )
+scale = Vector2( 1.83183, 1.64911 )
+texture = ExtResource( 7 )
+
+[node name="Tile(4)" type="Sprite" parent="Platforms"]
+position = Vector2( -1253, 113 )
+scale = Vector2( 1.44144, 1.35057 )
+texture = ExtResource( 5 )
+
+[node name="Tile(2)" type="Sprite" parent="Platforms"]
+position = Vector2( -2184, 268.311 )
+scale = Vector2( 2.47619, 0.958339 )
+texture = ExtResource( 8 )
+
+[node name="Tile(1)" type="Sprite" parent="Platforms"]
+position = Vector2( -673.116, 332.087 )
+scale = Vector2( 1.53788, 2.24695 )
+texture = ExtResource( 4 )
+
+[node name="Tile(6)" type="Sprite" parent="Platforms"]
+position = Vector2( -2693, 225.5 )
+scale = Vector2( 2.85305, 2.68142 )
+texture = ExtResource( 10 )
+
+[node name="Tile(3)2" type="Sprite" parent="Platforms"]
+position = Vector2( -649, -597 )
+scale = Vector2( 1.53788, 1.84513 )
+texture = ExtResource( 6 )
+
+[node name="Tile(6)2" type="Sprite" parent="Platforms"]
+position = Vector2( -647, -154 )
+scale = Vector2( 1.53788, 1.84513 )
+texture = ExtResource( 10 )
+
+[node name="Tile(3)" type="Sprite" parent="Platforms"]
+position = Vector2( -1673, 262.5 )
+scale = Vector2( 1.53788, 0.977987 )
+texture = ExtResource( 6 )
+
+[node name="Poles" type="Node2D" parent="."]
+
+[node name="Sprite19" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -399, 225 )
+rotation = 1.5708
+scale = Vector2( 0.410491, 0.712864 )
+z_index = 30
+texture = ExtResource( 11 )
+
+[node name="Sprite22" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -1466, -88 )
+rotation = -1.5708
+scale = Vector2( 0.410491, 0.712864 )
+texture = ExtResource( 11 )
+
+[node name="Sprite27" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -2583, 307 )
+rotation = -1.5708
+scale = Vector2( 0.410491, 0.712864 )
+z_index = 15
+texture = ExtResource( 11 )
+
+[node name="Sprite26" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -1911, -61 )
+rotation = -1.5708
+scale = Vector2( 0.396993, 0.712864 )
+texture = ExtResource( 11 )
+
+[node name="Sprite23" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -1468, 370 )
+rotation = -1.5708
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 30
+texture = ExtResource( 11 )
+
+[node name="Sprite24" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -2163, 343 )
+rotation = -1.5708
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 11 )
+
+[node name="Sprite25" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -1122.66, 302.368 )
+rotation = -1.5708
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 11 )
+
+[node name="Sprite13" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -2456, -154 )
+rotation = -1.5708
+scale = Vector2( 0.498558, 1 )
+texture = ExtResource( 11 )
+
+[node name="Orb Green Boss" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -2575, 336 )
+z_index = 12
+
+[node name="Orb Green Boss2" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -2447, -100 )
+
+[node name="Orb Green Boss3" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -2160, 483 )
+
+[node name="Orb Green Boss4" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -1891, -101 )
+
+[node name="Orb Green Boss5" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -1464, 409 )
+scale = Vector2( 0.508877, 0.684245 )
+
+[node name="Orb Green Boss7" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -1459, -45 )
+scale = Vector2( 0.508877, 0.684245 )
+
+[node name="Orb Green Boss16" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -1123.66, 330.368 )
+scale = Vector2( 0.348877, 0.684245 )
+
+[node name="Orb Green Boss17" parent="Poles" instance=ExtResource( 12 )]
+position = Vector2( -413, 178 )
+scale = Vector2( 0.348877, 0.684245 )
+
+[node name="Acid Drops" type="Node2D" parent="."]
+
+[node name="AnimatedSprite37" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2668, -247 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+playing = true
+
+[node name="AnimatedSprite38" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2200, -278 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+playing = true
+
+[node name="AnimatedSprite39" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1676, -236 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite40" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1141, -283 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite41" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -788, -286 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite50" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2546, -391.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite51" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2078, -422.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite52" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1554, -380.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite53" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1019, -427.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite54" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -365, -387 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite55" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2752, -521.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite56" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2284, -552.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite57" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1760, -510.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite58" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1225, -557.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 21
+playing = true
+
+[node name="AnimatedSprite59" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -992, -614 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite42" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1006, 241 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite43" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1311, 279 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite44" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1695, 386 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite45" type="AnimatedSprite" parent="Acid Drops"]
+visible = false
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( 1588, 497.001 )
+scale = Vector2( 2.01338, 31.1673 )
+z_index = -1
+frames = SubResource( 67 )
+animation = "Water"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite46" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2023, 421 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+playing = true
+
+[node name="AnimatedSprite47" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2432, 382 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+playing = true
+
+[node name="AnimatedSprite60" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1196, 385.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite61" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1501, 423.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite62" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1885, 530.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 21
+playing = true
+
+[node name="AnimatedSprite63" type="AnimatedSprite" parent="Acid Drops"]
+visible = false
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( 1588, 497.001 )
+scale = Vector2( 2.01338, 31.1673 )
+z_index = -1
+frames = SubResource( 67 )
+animation = "Water"
+playing = true
+
+[node name="AnimatedSprite64" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2213, 565.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite65" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2622, 526.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite66" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -291, 449.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite67" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -596, 487.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 21
+playing = true
+
+[node name="AnimatedSprite68" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -980, 594.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite69" type="AnimatedSprite" parent="Acid Drops"]
+visible = false
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( 1588, 497.001 )
+scale = Vector2( 2.01338, 31.1673 )
+z_index = -1
+frames = SubResource( 67 )
+animation = "Water"
+frame = 13
+playing = true
+
+[node name="AnimatedSprite70" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1308, 629.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite71" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1717, 590.5 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="AnimatedSprite48" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -2758, 364 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 22
+playing = true
+
+[node name="AnimatedSprite49" type="AnimatedSprite" parent="Acid Drops"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -498, -206 )
+scale = Vector2( 1, 0.999999 )
+frames = SubResource( 66 )
+frame = 20
+playing = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 68 )
+
+[node name="Node" type="Sprite" parent="."]
+modulate = Color( 0.807843, 0.854902, 0.772549, 1 )
+
+[node name="Sprite3" type="Sprite" parent="Node"]
+position = Vector2( -2475, 195.175 )
+scale = Vector2( 0.164572, 0.666284 )
+texture = ExtResource( 11 )
+
+[node name="Sprite11" type="Sprite" parent="Node"]
+position = Vector2( -3221.49, 158.929 )
+scale = Vector2( 0.861177, 0.77604 )
+texture = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="Node"]
+position = Vector2( -1891.02, 315.37 )
+scale = Vector2( 0.150953, 0.592656 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="Node"]
+position = Vector2( -1461.93, 123.727 )
+scale = Vector2( 0.117284, 0.535165 )
+texture = ExtResource( 11 )
+
+[node name="Sprite4" type="Sprite" parent="Node"]
+position = Vector2( -1115.22, 47.1133 )
+rotation = 3.15556
+scale = Vector2( 0.192793, 0.593252 )
+texture = ExtResource( 11 )
+
+[node name="Sprite6" type="Sprite" parent="Node"]
+position = Vector2( 300, -831.023 )
+rotation = 1.5708
+scale = Vector2( 0.0976221, 0.283164 )
+texture = ExtResource( 11 )
+
+[node name="Sprite8" type="Sprite" parent="Node"]
+position = Vector2( -7.00003, -1257.26 )
+rotation = 1.5708
+scale = Vector2( 0.0761485, 0.302523 )
+texture = ExtResource( 11 )
+
+[node name="Sprite10" type="Sprite" parent="Node"]
+position = Vector2( 171, -1699.06 )
+rotation = 1.5708
+scale = Vector2( 0.117674, 0.302523 )
+texture = ExtResource( 11 )
+
+[node name="Sprite7" type="Sprite" parent="Node"]
+position = Vector2( -657.829, -307.172 )
+rotation = 1.5708
+scale = Vector2( 0.114922, 0.439919 )
+texture = ExtResource( 11 )
+
+[node name="Sprite9" type="Sprite" parent="Node"]
+position = Vector2( -597.427, -25.1031 )
+rotation = 1.5708
+scale = Vector2( 0.151015, 0.436868 )
+texture = ExtResource( 11 )
+
+[node name="Sprite12" type="Sprite" parent="Node"]
+position = Vector2( -831.883, 310.662 )
+rotation = 1.5708
+scale = Vector2( 0.0698427, 0.481145 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -3121.35, 133.929, -3118.37, 176.786, -2841, 176, -2840, 234, -2693.95, 237.5, -2694, 310, -2550, 309, -2548.01, 208.929, -2403, 215, -2403, 236, -2290, 241, -2288, 362, -2288, 365, -2393, 367, -2392, 446, -2055, 448, -2055, 409, -1961, 408, -1959.78, 337.5, -1824.26, 335.714, -1827.24, 337.5, -1867.45, 337.5, -1868, 395, -1477, 397, -1475, 140, -1410, 140, -1410, 143, -1318, 145, -1318, 158, -1097, 163, -1098, 95, -1129, 95, -1129, 83, -1200, 81, -1200.29, 60.7143, -1030, 65, -1029, 174, -891, 176, -892, 278, -847.351, 278.571, -847.351, 333.929, -880.113, 333.929, -878.624, 553.571, -729.705, 555.357, -729.705, 530.357, -650.778, 528.571, -631.418, 553.571, -472.074, 553.571, -473.564, 337.5, -564.404, 335.714, -564, 37, -588.232, 41.0714, -586.742, -92.8571, -569, -92, -569, -256, -646.31, -255.357, -647.799, -264.286, -646.31, -357.143, -456, -352, -453, -841, -428, -839, -435, -280, -526, -298, -533, -65, -519, 301, -453, 304, -451, 598, -920, 595, -914, 325, -923, 210, -1430, 205, -1433, 447, -2009, 459, -2003, 493, -2154.41, 488.715, -2427, 481, -2431, 335, -2321, 333, -2317, 280, -2428, 276, -2435, 231, -2525, 231, -2530, 333, -2721, 332, -2723, 249, -2862, 244, -2863, 185, -3130.29, 183.929, -3122.84, 144.643 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -3116.88, 139.286, -2839.89, 142.857, -2839.89, 76.7857, -2546.52, 76.7857, -2546.52, 175, -2518.23, 178.571, -2446.75, 183.929, -2402.07, 180.357, -2402, 45, -1966, 46, -1967, 120, -2063, 123, -2062, 190, -1955, 193, -1958.29, 296.429, -1944.89, 301.786, -1900.21, 300, -1877.87, 305.357, -1825.75, 300, -1826, 271, -1864.47, 271.429, -1866, 138, -1830, 138, -1726, 111, -1520, 110, -1514, 114, -1513, 110, -1505.57, 110.714, -1466.86, 110.714, -1460.9, 114.286, -1410.27, 110.714, -1410, -2, -1200, -2, -1200.29, 30.3571, -1179.44, 28.5714, -1174.97, 32.1429, -1166.04, 32.1429, -1152.64, 30.3571, -1130.3, 28.5714, -1113.92, 28.5714, -1102, 30.3571, -1096.05, 35.7143, -1090.09, 39.2857, -1075.2, 33.9286, -1067.75, 35.7143, -1061.8, 39.2857, -1030.52, 33.9286, -1031, 7, -794, 4, -794, 278, -817.567, 278.571, -820.546, 294.643, -820.546, 307.143, -823.524, 317.857, -822.035, 328.571, -822.035, 333.929, -670.137, 335.714, -670.137, 37.5, -610.569, 37.5, -611, 31, -610.569, 21.4286, -612.059, 0, -613.548, -26.7857, -609, -41, -610.569, -92.8571, -647, -93, -647.799, -146.429, -725, -147, -725, -255, -670.137, -257.143, -671.626, -267.857, -671.626, -283.929, -671.626, -300, -671.626, -312.5, -667, -327, -667, -346, -667, -358, -844, -355, -843, -455, -801, -456, -800, -582, -841, -582, -841, -835, -810, -833, -702, -884, -493, -882, -438, -821, -419, -821, -482, -892, -700, -897, -809, -849, -851, -845, -853, -571, -811, -572, -812, -469, -851, -466, -853, -337, -685, -332, -677, -268, -735, -267, -734, -133, -660, -133, -661, -81, -623, -82, -621, 22, -626, 28, -673, 30, -682, 331, -804.165, 323.214, -808.632, 292.857, -777, 292, -781, -9, -1043, -5, -1048, 27, -1181, 22, -1187, -15, -1442, -18, -1433, 96, -1708, 86, -1818, 122, -1887, 125, -1889, 264, -1870, 279, -1847, 282, -1847, 290, -1948, 288, -1941, 177, -2026, 177, -2021, 150, -1948, 143, -1947, 35, -2415, 27, -2421.43, 155.357, -2521.2, 150, -2533, 64, -2852, 60, -2855, 124, -3160.07, 121.429, -3154.11, 180.357, -3113.91, 180.357 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Creature 2" parent="Node2D" instance=ExtResource( 14 )]
+position = Vector2( -2253.15, 146.429 )
+scale = Vector2( 1.41697, 1.5 )
+z_index = 2
+
+[node name="Creature 3" parent="Node2D" instance=ExtResource( 14 )]
+position = Vector2( -659.713, 405.357 )
+scale = Vector2( 1.41697, 1.5 )
+z_index = 2
+
+[node name="Creature 4" parent="Node2D" instance=ExtResource( 14 )]
+position = Vector2( -1758.74, 192.857 )
+scale = Vector2( 1.41697, 1.5 )
+z_index = 2
+
+[node name="Creature 5" parent="Node2D" instance=ExtResource( 14 )]
+position = Vector2( -735.662, -414.286 )
+scale = Vector2( 1.41697, 1.5 )
+z_index = 2
+
+[node name="Exit SWAMP" type="Area2D" parent="."]
+position = Vector2( -3109.44, 142.857 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit SWAMP"]
+position = Vector2( 0, 16.4286 )
+shape = SubResource( 83 )
+
+[node name="Entrance Swamp" type="Area2D" parent="."]
+position = Vector2( -655.246, -614.286 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance Swamp"]
+position = Vector2( 23.8272, 0 )
+shape = SubResource( 84 )
+
+[node name="Water Splash2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -15.0
+autoplay = true
+
+[node name="Background Music 1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -9.0
+autoplay = true
+
+[connection signal="body_entered" from="Exit SWAMP" to="Exit SWAMP" method="_on_Exit_SWAMP_body_entered"]
+[connection signal="body_entered" from="Entrance Swamp" to="Entrance Swamp" method="_on_Entrance_Swamp_body_entered"]
+
+[editable path="Player2/Camera2D"]

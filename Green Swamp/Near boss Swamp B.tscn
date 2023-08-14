@@ -1,0 +1,1637 @@
+[gd_scene load_steps=110 format=2]
+
+[ext_resource path="res://Player/Player back up 2.0.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Effects/Ocean-Sheet.png" type="Texture" id=2]
+[ext_resource path="res://Green Swamp/tile (3).png" type="Texture" id=3]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World 1/stairsss.png" type="Texture" id=6]
+[ext_resource path="res://Green Swamp/tile (4).png" type="Texture" id=7]
+[ext_resource path="res://Green Swamp/tile(2).png" type="Texture" id=8]
+[ext_resource path="res://Green Swamp/tile (6).png" type="Texture" id=9]
+[ext_resource path="res://Tree.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Green Swamp/tile (1).png" type="Texture" id=11]
+[ext_resource path="res://Green Swamp/Exit to Green Swamp Castle.gd" type="Script" id=12]
+[ext_resource path="res://Green Swamp/acid.png" type="Texture" id=13]
+[ext_resource path="res://Enemies/Axolyte.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Enemies/Green Fly.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Lighting/Orb Green Boss.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Battle/Platform 2.png" type="Texture" id=17]
+[ext_resource path="res://Attack/Acid drop-Sheet.png" type="Texture" id=18]
+[ext_resource path="res://Green Swamp/Entrance to Hallway to boss.gd" type="Script" id=19]
+[ext_resource path="res://Music/water-splosh-38143.mp3" type="AudioStream" id=20]
+[ext_resource path="res://Music/deep-in-the-dell-126916.mp3" type="AudioStream" id=21]
+
+[sub_resource type="Environment" id=34]
+background_mode = 4
+fog_enabled = true
+fog_color = Color( 0.501961, 0.6, 0.701961, 1 )
+glow_enabled = true
+glow_intensity = 2.08
+glow_strength = 0.91
+glow_blend_mode = 1
+
+[sub_resource type="TileSet" id=32]
+0/name = "stairsss.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 2, 102, 10 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "tile (1).png 1"
+1/texture = ExtResource( 11 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 72, -5, 162, 176 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "tile (1).png 2"
+2/texture = ExtResource( 11 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 54, -1, 201, 148 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=33]
+extents = Vector2( 84.5, 10 )
+
+[sub_resource type="TileSet" id=39]
+0/name = "Platform 2.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -12, -7, 909, 102 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 18 )
+region = Rect2( 112, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 18 )
+region = Rect2( 224, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 18 )
+region = Rect2( 336, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 18 )
+region = Rect2( 448, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 18 )
+region = Rect2( 560, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 18 )
+region = Rect2( 672, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 18 )
+region = Rect2( 784, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 18 )
+region = Rect2( 896, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 18 )
+region = Rect2( 1008, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 18 )
+region = Rect2( 1120, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 18 )
+region = Rect2( 1232, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 18 )
+region = Rect2( 1344, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 18 )
+region = Rect2( 1456, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 18 )
+region = Rect2( 1568, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 18 )
+region = Rect2( 1680, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 18 )
+region = Rect2( 1792, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 18 )
+region = Rect2( 1904, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 18 )
+region = Rect2( 2016, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 18 )
+region = Rect2( 2128, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 18 )
+region = Rect2( 2240, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 18 )
+region = Rect2( 2352, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 18 )
+region = Rect2( 2464, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 18 )
+region = Rect2( 2576, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 18 )
+region = Rect2( 2688, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 18 )
+region = Rect2( 2800, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 18 )
+region = Rect2( 2912, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 18 )
+region = Rect2( 3024, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 18 )
+region = Rect2( 3136, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 18 )
+region = Rect2( 3248, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 18 )
+region = Rect2( 3360, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 18 )
+region = Rect2( 3472, 0, 112, 477 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 18 )
+region = Rect2( 3584, 0, 112, 477 )
+
+[sub_resource type="SpriteFrames" id=89]
+animations = [ {
+"frames": [ SubResource( 64 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 65 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 88 ), SubResource( 40 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="TileSet" id=90]
+0/name = "Platform 2.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -9, -10, 903, 94 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=91]
+0/name = "Platform 2.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -12, -10, 906, 122 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=92]
+0/name = "Platform 2.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -9, -8, 900, 96 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 888, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 1776, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 2664, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 3552, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 4440, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 5328, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 2 )
+region = Rect2( 6216, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 2 )
+region = Rect2( 7104, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 2 )
+region = Rect2( 7992, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 2 )
+region = Rect2( 8880, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 2 )
+region = Rect2( 9768, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 2 )
+region = Rect2( 10656, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 2 )
+region = Rect2( 11544, 0, 888, 74 )
+
+[sub_resource type="SpriteFrames" id=93]
+animations = [ {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ) ],
+"loop": true,
+"name": "Water",
+"speed": 12.0
+} ]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 888, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 1776, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 2664, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 3552, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 4440, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 5328, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 6216, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 7104, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 7992, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 8880, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 9768, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 10656, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 11544, 0, 888, 74 )
+
+[sub_resource type="SpriteFrames" id=94]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "Water",
+"speed": 12.0
+} ]
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 2 )
+region = Rect2( 888, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 2 )
+region = Rect2( 1776, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 2 )
+region = Rect2( 2664, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 2 )
+region = Rect2( 3552, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 2 )
+region = Rect2( 4440, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 2 )
+region = Rect2( 5328, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 2 )
+region = Rect2( 6216, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=49]
+atlas = ExtResource( 2 )
+region = Rect2( 7104, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 2 )
+region = Rect2( 7992, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 2 )
+region = Rect2( 8880, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 2 )
+region = Rect2( 9768, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 2 )
+region = Rect2( 10656, 0, 888, 74 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 2 )
+region = Rect2( 11544, 0, 888, 74 )
+
+[sub_resource type="SpriteFrames" id=95]
+animations = [ {
+"frames": [ SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ) ],
+"loop": true,
+"name": "Water",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=96]
+animations = [ {
+"frames": [ SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 65 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 88 ), SubResource( 40 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=97]
+extents = Vector2( 10, 85 )
+
+[node name="Near Boss Swamp" type="Node2D"]
+position = Vector2( 11, 1132 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 34 )
+
+[node name="Acid" type="Sprite" parent="."]
+modulate = Color( 0.14902, 0.219608, 0.172549, 1 )
+position = Vector2( 1550.5, -1987.54 )
+scale = Vector2( 8.20608, 0.536908 )
+z_index = -2
+texture = ExtResource( 13 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 527.002, -1707.5 )
+scale = Vector2( 1.22523, 2.13415 )
+texture = ExtResource( 17 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1536, -1697 )
+scale = Vector2( 1.06982, 2.13415 )
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss25" parent="." instance=ExtResource( 16 )]
+modulate = Color( 0.219608, 0.380392, 0.215686, 0 )
+position = Vector2( -1713.5, -2135 )
+scale = Vector2( 236.993, 2.58996 )
+z_index = -10
+
+[node name="Node2D" type="Node2D" parent="."]
+modulate = Color( 0.713726, 1, 0.698039, 1 )
+position = Vector2( -29, 583 )
+
+[node name="Tile(2)" type="Sprite" parent="Node2D"]
+position = Vector2( -321, -459 )
+scale = Vector2( 2.32738, 1.09091 )
+texture = ExtResource( 8 )
+
+[node name="Tile(4)" type="Sprite" parent="Node2D"]
+position = Vector2( -57.0626, 168.125 )
+scale = Vector2( 2.12556, 1.6681 )
+texture = ExtResource( 7 )
+
+[node name="Tile(3)" type="Sprite" parent="Node2D"]
+position = Vector2( -672.75, -1197.75 )
+scale = Vector2( 2.70644, 1.18396 )
+texture = ExtResource( 3 )
+
+[node name="Tile(6)" type="Sprite" parent="Node2D"]
+position = Vector2( -298, -1463 )
+scale = Vector2( 3.55636, 0.920282 )
+texture = ExtResource( 9 )
+
+[node name="Tile(4)2" type="Sprite" parent="Node2D"]
+position = Vector2( -797, -1499 )
+scale = Vector2( 1.76126, 1.02586 )
+texture = ExtResource( 7 )
+
+[node name="Tile(3)3" type="Sprite" parent="Node2D"]
+position = Vector2( 48, 1100 )
+scale = Vector2( 2.99242, 1.79874 )
+texture = ExtResource( 3 )
+
+[node name="Tile(2)2" type="Sprite" parent="Node2D"]
+position = Vector2( -152, -1769 )
+texture = ExtResource( 8 )
+
+[node name="Tile(4)3" type="Sprite" parent="Node2D"]
+position = Vector2( -298, -2091 )
+texture = ExtResource( 7 )
+
+[node name="Tile(3)2" type="Sprite" parent="Node2D"]
+position = Vector2( -192, -2298 )
+scale = Vector2( 1.58333, 0.644654 )
+texture = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( 18.5, 1570 )
+scale = Vector2( 1.89773, 1 )
+tile_set = SubResource( 32 )
+cell_size = Vector2( 5, 5 )
+format = 1
+tile_data = PoolIntArray( -3211271, 0, 0, -3080199, 0, 0, -2949127, 0, 0, -2818055, 0, 0, -2686983, 0, 0, -2555911, 0, 0, -2424839, 0, 0, -2293767, 0, 0, -2162695, 0, 0, -2031623, 0, 0, -1900551, 0, 0, -1769479, 0, 0, -1638407, 0, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( 18.5, 900 )
+scale = Vector2( 1.89773, 1 )
+tile_set = SubResource( 32 )
+cell_size = Vector2( 5, 5 )
+format = 1
+tile_data = PoolIntArray( -1245191, 0, 0, -1114119, 0, 0, -983047, 0, 0, -851975, 0, 0, -720903, 0, 0, -589831, 0, 0, -458759, 0, 0, -327687, 0, 0, -196615, 0, 0, -65543, 0, 0, 65529, 0, 0, 196601, 0, 0, 327673, 0, 0, 458745, 0, 0, 589817, 0, 0, 720889, 0, 0, 851961, 0, 0, 983033, 0, 0, 1114105, 0, 0 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( 18.5, 1200 )
+scale = Vector2( 1.89773, 1 )
+tile_set = SubResource( 32 )
+cell_size = Vector2( 5, 5 )
+format = 1
+tile_data = PoolIntArray( -3211271, 0, 0, -3080199, 0, 0, -2949127, 0, 0, -2818055, 0, 0, -2686983, 0, 0, -2555911, 0, 0, -2424839, 0, 0, -2293767, 0, 0, -2162695, 0, 0, -2031623, 0, 0, -1900551, 0, 0, -1769479, 0, 0, -1638407, 0, 0, -1507335, 0, 0, -1376263, 0, 0, -1245191, 0, 0, -1114119, 0, 0, -983047, 0, 0, -851975, 0, 0, -720903, 0, 0, -589831, 0, 0, -458759, 0, 0, -327687, 0, 0, -196615, 0, 0, -65543, 0, 0, 65529, 0, 0, 196601, 0, 0, 327673, 0, 0, 458745, 0, 0, 589817, 0, 0, 720889, 0, 0, 851961, 0, 0, 983033, 0, 0, 1114105, 0, 0, 1245177, 0, 0, 1376249, 0, 0, 1507321, 0, 0 )
+
+[node name="TileMap4" type="TileMap" parent="."]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -262, 488 )
+scale = Vector2( 1.89773, 1 )
+tile_set = SubResource( 32 )
+cell_size = Vector2( 5, 5 )
+format = 1
+tile_data = PoolIntArray( -3211271, 0, 0, -3080199, 0, 0, -2949127, 0, 0, -2818055, 0, 0, -2686983, 0, 0, -2555911, 0, 0, -2424839, 0, 0, -2293767, 0, 0, -2162695, 0, 0, -2031623, 0, 0, -1900551, 0, 0, -1769479, 0, 0, -1638407, 0, 0, -1507335, 0, 0, -1376263, 0, 0, -1245191, 0, 0, -1114119, 0, 0, -983047, 0, 0, -851975, 0, 0, -720903, 0, 0, -589831, 0, 0, -458759, 0, 0, -327687, 0, 0, -196615, 0, 0, -65543, 0, 0, 65529, 0, 0, 196601, 0, 0, 327673, 0, 0, 458745, 0, 0, 589817, 0, 0, 720889, 0, 0, 851961, 0, 0, 983033, 0, 0, 1114105, 0, 0, 1245177, 0, 0, 1376249, 0, 0, 1507321, 0, 0 )
+
+[node name="TileMap5" type="TileMap" parent="."]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -497, -250 )
+scale = Vector2( 1.89773, 1 )
+tile_set = SubResource( 32 )
+cell_size = Vector2( 5, 5 )
+format = 1
+tile_data = PoolIntArray( -3211271, 0, 0, -3080199, 0, 0, -2949127, 0, 0, -2818055, 0, 0, -2686983, 0, 0, -2555911, 0, 0, -2424839, 0, 0, -2293767, 0, 0, -2162695, 0, 0, -2031623, 0, 0, -1900551, 0, 0, -1769479, 0, 0, -1638407, 0, 0, -1507335, 0, 0, -1376263, 0, 0, -1245191, 0, 0, -1114119, 0, 0, -983047, 0, 0, -851975, 0, 0, -720903, 0, 0, -589831, 0, 0, -458759, 0, 0, -327687, 0, 0, -196615, 0, 0, -65543, 0, 0, 65529, 0, 0, 196601, 0, 0, 327673, 0, 0, 458745, 0, 0, 589817, 0, 0, 720889, 0, 0, 851961, 0, 0, 983033, 0, 0, 1114105, 0, 0, 1245177, 0, 0, 1376249, 0, 0, 1507321, 0, 0 )
+
+[node name="Tree" parent="." instance=ExtResource( 10 )]
+modulate = Color( 0.447059, 1, 0.0666667, 1 )
+position = Vector2( 875, 34 )
+z_index = 12
+tile_data = PoolIntArray( -13238461, 1, 0, -12976308, 1, 0, -12517563, 1, 0, -12452012, 1, 0, -12386484, 1, 0, -11796654, 0, 0, -11731125, 0, 0, -11272372, 0, 0, -11272365, 0, 0, -3538690, 2, 0, 8191881, 1, 0, 8257469, 1, 0, 8322998, 1, 0, 8388500, 1, 0, 8388508, 0, 0, 8716171, 1, 0, 8716178, 1, 0, 8781729, 2, 0, 8781747, 2, 0, 8781752, 1, 0, 8847235, 1, 0, 8847236, 1, 0, 8847259, 0, 0, 8847300, 1, 0, 8978365, 0, 0, 9109383, 0, 0, 9240523, 1, 0, 9371524, 0, 0, 9502658, 0, 0, 9568185, 0, 0, 9830285, 0, 0, 9830331, 0, 0, 9830345, 1, 0, 10026901, 0, 0, 10026944, 1, 0, 10157963, 0, 0, 10223516, 1, 0, 10354616, 0, 0, 10420114, 0, 0, 10420166, 1, 0, 10551193, 1, 0, 10551230, 1, 0, 10616738, 1, 0, 10682293, 1, 0, 10747850, 1, 0, 10878867, 1, 0, 11009973, 1, 0, 11009988, 1, 0, 11075482, 0, 0, 11141025, 0, 0, 11141053, 0, 0, 11468690, 1, 0, 11468697, 1, 0, 11534263, 0, 0, 11534276, 1, 0, 11599805, 0, 0, 11665313, 0, 0 )
+
+[node name="Exit to Green Swamp Castle" type="Area2D" parent="."]
+position = Vector2( 16, 1729 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit to Green Swamp Castle"]
+position = Vector2( 62.5, 0 )
+shape = SubResource( 33 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Creature 2" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -256, 708 )
+
+[node name="Creature 3" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -58, 741 )
+
+[node name="Creature 4" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -331, -83 )
+
+[node name="Creature 5" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -405, 59 )
+
+[node name="Creature 6" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -863, -939 )
+
+[node name="Creature 8" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -273, -877 )
+
+[node name="Creature 9" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -619, -705 )
+
+[node name="Creature 10" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -819, -542 )
+
+[node name="Axolyte" parent="Enemies" instance=ExtResource( 14 )]
+modulate = Color( 0.160784, 0.788235, 0.0901961, 1 )
+position = Vector2( -603, -574 )
+
+[node name="Axolyte2" parent="Enemies" instance=ExtResource( 14 )]
+modulate = Color( 0.160784, 0.788235, 0.0901961, 1 )
+position = Vector2( -499, -696 )
+
+[node name="Axolyte4" parent="Enemies" instance=ExtResource( 14 )]
+modulate = Color( 0.160784, 0.788235, 0.0901961, 1 )
+position = Vector2( -296, 35 )
+
+[node name="Axolyte5" parent="Enemies" instance=ExtResource( 14 )]
+modulate = Color( 0.160784, 0.788235, 0.0901961, 1 )
+position = Vector2( -227, -1280 )
+
+[node name="Axolyte3" parent="Enemies" instance=ExtResource( 14 )]
+modulate = Color( 0.160784, 0.788235, 0.0901961, 1 )
+position = Vector2( -363, 183 )
+
+[node name="Creature 11" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -414, 277 )
+
+[node name="Creature 12" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -826, -675 )
+
+[node name="Creature 13" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -152, -1147 )
+
+[node name="Creature 14" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -248, -1764 )
+
+[node name="Creature 15" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( -133, -1721 )
+
+[node name="Poles" type="Node2D" parent="."]
+
+[node name="Sprite13" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3881.34, 2061.37 )
+rotation = 4.71239
+scale = Vector2( 0.498558, 1 )
+texture = ExtResource( 17 )
+
+[node name="Sprite19" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3571.34, 536.368 )
+rotation = 4.71239
+scale = Vector2( 0.410491, 0.712864 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Sprite22" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3700.57, -93.3743 )
+rotation = 4.71239
+scale = Vector2( 0.410491, 0.712864 )
+texture = ExtResource( 17 )
+
+[node name="Sprite23" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3696.45, -573.742 )
+rotation = 4.71239
+scale = Vector2( 0.311639, 0.666822 )
+texture = ExtResource( 17 )
+
+[node name="Sprite24" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3369.34, -265.632 )
+rotation = 4.71239
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite25" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -109, -1404 )
+rotation = 1.5708
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite26" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -514.66, 517.368 )
+rotation = 4.71239
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite27" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 4167.34, -1208.63 )
+rotation = 4.71239
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite28" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -242.66, -1223.63 )
+rotation = 4.71239
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite31" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( -409, -1808 )
+rotation = 4.71239
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite29" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3908.34, -1125.63 )
+rotation = 1.5708
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite30" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3986.34, -74.6322 )
+rotation = 1.5708
+scale = Vector2( 0.311639, 0.666822 )
+z_index = 40
+texture = ExtResource( 17 )
+
+[node name="Sprite20" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3838.34, 600.368 )
+rotation = 4.71239
+scale = Vector2( 0.254244, 0.559042 )
+texture = ExtResource( 17 )
+
+[node name="Sprite14" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 4398.34, 1846.93 )
+rotation = 4.71239
+scale = Vector2( 0.373425, 1 )
+texture = ExtResource( 17 )
+
+[node name="Sprite15" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3565.34, 1395.37 )
+rotation = 4.71239
+scale = Vector2( 0.498558, 1 )
+texture = ExtResource( 17 )
+
+[node name="Sprite16" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 4131.34, 1372.58 )
+rotation = 4.71239
+scale = Vector2( 0.387726, 1 )
+texture = ExtResource( 17 )
+
+[node name="Sprite17" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 4161.48, 862.805 )
+rotation = 4.71239
+scale = Vector2( 0.262869, 0.661973 )
+texture = ExtResource( 17 )
+
+[node name="Sprite18" type="Sprite" parent="Poles"]
+modulate = Color( 0.752941, 0.843137, 0.72549, 1 )
+position = Vector2( 3651.34, 860.368 )
+rotation = 4.71239
+scale = Vector2( 0.262869, 0.661973 )
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss7" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( 33, -102 )
+z_index = -100
+
+[node name="Orb Green Boss8" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( 33, -102 )
+z_index = -100
+
+[node name="Orb Green Boss9" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -143, -287 )
+z_index = -100
+
+[node name="Orb Green Boss10" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -143, -287 )
+z_index = -100
+
+[node name="Orb Green Boss11" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -75, -587 )
+z_index = -100
+
+[node name="Orb Green Boss12" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -75, -587 )
+z_index = -100
+
+[node name="Orb Green Boss13" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -404, -1085 )
+z_index = -100
+
+[node name="Orb Green Boss14" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -404, -1085 )
+z_index = -100
+
+[node name="Orb Green Boss15" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -18, -1069 )
+z_index = -100
+
+[node name="Orb Green Boss16" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -18, -1069 )
+z_index = -100
+
+[node name="Orb Green Boss" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -1003, 75 )
+
+[node name="Orb Green Boss2" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -1003, 75 )
+
+[node name="Orb Green Boss3" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -877, -327 )
+
+[node name="Orb Green Boss4" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -877, -327 )
+
+[node name="Orb Green Boss5" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -650, -331 )
+
+[node name="Orb Green Boss6" parent="Poles" instance=ExtResource( 16 )]
+position = Vector2( -650, -331 )
+
+[node name="TileMap" type="TileMap" parent="Poles"]
+modulate = Color( 0.321569, 0.396078, 0.337255, 1 )
+position = Vector2( 3242, -1686.01 )
+rotation = -1.5708
+z_index = 1
+tile_set = SubResource( 39 )
+cell_size = Vector2( 3, 3 )
+format = 1
+tile_data = PoolIntArray( -82509762, 0, 0, -81002452, 0, 0, -79429572, 0, 0, -77856722, 0, 0, -76349385, 0, 0, -74776532, 0, 0, -73203661, 0, 0, -71827417, 0, 0, -70451157, 0, 0, -69205981, 0, 0, -67829718, 0, 0, -66519007, 0, 0, -65208275, 0, 0, -64159709, 0, 0, -62652370, 0, 0, -61276130, 0, 0, -59834324, 0, 0, -58392546, 0, 0, -57147346, 0, 0, -56098787, 0, 0, -54722514, 0, 0, -53542881, 0, 0, -52232145, 0, 0, -51118047, 0, 0, -49741772, 0, 0, -49676236, 0, 0, -48365535, 0, 0, -48300000, 0, 0, -48299998, 0, 0, -48234464, 0, 0, -46989264, 0, 0, -45809632, 0, 0, -44433363, 0, 0, -43253727, 0, 0, -42074065, 0, 0, -40828894, 0, 0, -39518159, 0, 0, -38404065, 0, 0 )
+
+[node name="TileMap2" type="TileMap" parent="Poles"]
+modulate = Color( 0.321569, 0.396078, 0.337255, 1 )
+position = Vector2( 3242, -1686.01 )
+rotation = -1.5708
+z_index = 2
+tile_set = SubResource( 39 )
+cell_size = Vector2( 3, 3 )
+format = 1
+tile_data = PoolIntArray( -102302195, 0, 0, -102302194, 0, 0, -102302193, 0, 0, -102302192, 0, 0, -102302191, 0, 0, -102302190, 0, 0, -102302189, 0, 0, -101974620, 0, 0, -101974619, 0, 0, -101974618, 0, 0, -101974617, 0, 0, -101974616, 0, 0, -101974615, 0, 0, -101974614, 0, 0, -101974613, 0, 0, -101974612, 0, 0, -101974611, 0, 0, -101974610, 0, 0, -101974609, 0, 0, -101974608, 0, 0, -101974607, 0, 0, -101974606, 0, 0, -101253456, 0, 0, -101057324, 0, 0, -101057323, 0, 0, -100598655, 0, 0, -100598654, 0, 0, -100533121, 0, 0, -100533120, 0, 0, -100467588, 0, 0, -100467587, 0, 0, -100467586, 0, 0, -100402054, 0, 0, -100402053, 0, 0, -100336520, 0, 0, -100336519, 0, 0, -99222171, 0, 0, -99222170, 0, 0, -99222169, 0, 0, -99222168, 0, 0, -99222167, 0, 0, -99156640, 0, 0, -99156639, 0, 0, -99156638, 0, 0, -99156637, 0, 0, -99156636, 0, 0, -99090996, 0, 0, -99090995, 0, 0, -99090994, 0, 0, -99090993, 0, 0, -99090992, 0, 0, -98960228, 0, 0, -98960130, 0, 0, -98894693, 0, 0, -98829236, 0, 0, -98829235, 0, 0, -98829158, 0, 0, -98763704, 0, 0, -98763703, 0, 0, -98763702, 0, 0, -98763701, 0, 0, -98763622, 0, 0, -98698170, 0, 0, -98698169, 0, 0, -98632635, 0, 0, -98632100, 0, 0, -98631963, 0, 0, -98567101, 0, 0, -98567100, 0, 0, -98501566, 0, 0, -98436031, 0, 0, -98370496, 0, 0, -95421301, 0, 0, -95420605, 0, 0, -94438379, 0, 0, -94371968, 0, 0, -92603426, 0, 0, -92603425, 0, 0, -92603424, 0, 0, -92603423, 0, 0, -92603422, 0, 0, -92012747, 0, 0, -91358337, 0, 0, -90964860, 0, 0, -89063543, 0, 0, -89063542, 0, 0, -88146100, 0, 0, -88080566, 0, 0, -88080565, 0, 0, -88015031, 0, 0, -87949495, 0, 0, -87883958, 0, 0, -87753724, 0, 0, -87425962, 0, 0, -87360426, 0, 0, -87294890, 0, 0, -87229354, 0, 0, -87163818, 0, 0, -87098282, 0, 0, -87032746, 0, 0, -86967210, 0, 0, -85197011, 0, 0, -85066982, 0, 0, -85001446, 0, 0, -84935910, 0, 0, -84870374, 0, 0, -84804838, 0, 0, -84739302, 0, 0, -84607975, 0, 0, -84607974, 0, 0, -84607973, 0, 0, -84607972, 0, 0, -84607971, 0, 0, -84607970, 0, 0, -84542449, 0, 0, -84542448, 0, 0, -84542447, 0, 0, -84542446, 0, 0, -84542445, 0, 0, -84542444, 0, 0, -84542443, 0, 0, -84542442, 0, 0, -84542441, 0, 0, -84542440, 0, 0, -84476918, 0, 0, -84476917, 0, 0, -84476916, 0, 0, -84476915, 0, 0, -84476914, 0, 0, -84410522, 0, 0, -84214873, 0, 0, -84214872, 0, 0, -84214871, 0, 0, -84214870, 0, 0, -84214869, 0, 0, -84214868, 0, 0, -84214867, 0, 0, -84214866, 0, 0, -84149329, 0, 0, -84149328, 0, 0, -84149327, 0, 0, -84149326, 0, 0, -84149325, 0, 0, -84149324, 0, 0, -84149323, 0, 0, -84149322, 0, 0, -71827417, 0, 0, -70451157, 0, 0, -69206771, 0, 0, -69206770, 0, 0, -69205981, 0, 0, -67895786, 0, 0, -67829718, 0, 0, -67240794, 0, 0, -66519007, 0, 0, -65340375, 0, 0, -65208275, 0, 0, -64159709, 0, 0, -63832525, 0, 0, -62652370, 0, 0, -61801468, 0, 0, -61276130, 0, 0, -60621444, 0, 0, -59834324, 0, 0, -59573365, 0, 0, -59048261, 0, 0, -58393375, 0, 0, -58393374, 0, 0, -58393373, 0, 0, -58393372, 0, 0, -58393371, 0, 0, -58393370, 0, 0, -58393369, 0, 0, -58393368, 0, 0, -58393367, 0, 0, -58393366, 0, 0, -58392546, 0, 0, -57935067, 0, 0, -57147346, 0, 0, -56098787, 0, 0, -55116698, 0, 0, -54722514, 0, 0, -53542881, 0, 0, -52364412, 0, 0, -52232145, 0, 0, -51118047, 0, 0, -49741772, 0, 0, -49676236, 0, 0, -48365535, 0, 0, -48300000, 0, 0, -48299998, 0, 0, -48234464, 0, 0, -46989264, 0, 0, -45809632, 0, 0, -44433363, 0, 0, -43253727, 0, 0, -42074065, 0, 0, -40828894, 0, 0, -39518159, 0, 0, -38404065, 0, 0 )
+
+[node name="AnimatedSprite21" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 842, -1810.5 )
+frames = SubResource( 89 )
+frame = 27
+playing = true
+
+[node name="AnimatedSprite22" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 561, -1813.5 )
+frames = SubResource( 89 )
+frame = 27
+playing = true
+
+[node name="AnimatedSprite23" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 319, -1814.5 )
+frames = SubResource( 89 )
+frame = 26
+playing = true
+
+[node name="AnimatedSprite24" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 76, -1809 )
+frames = SubResource( 89 )
+frame = 25
+playing = true
+
+[node name="AnimatedSprite25" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 933, -1994.5 )
+frames = SubResource( 89 )
+frame = 26
+playing = true
+
+[node name="AnimatedSprite26" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 652, -1997.5 )
+z_index = 5
+frames = SubResource( 89 )
+frame = 26
+playing = true
+
+[node name="AnimatedSprite27" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 410, -1998.5 )
+z_index = 5
+frames = SubResource( 89 )
+frame = 25
+playing = true
+
+[node name="AnimatedSprite28" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 167, -1993 )
+z_index = 5
+frames = SubResource( 89 )
+frame = 24
+playing = true
+
+[node name="AnimatedSprite29" type="AnimatedSprite" parent="Poles"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 1893, -1794.5 )
+frames = SubResource( 89 )
+frame = 29
+playing = true
+
+[node name="TileMap8" type="TileMap" parent="."]
+modulate = Color( 0.254902, 0.341176, 0.266667, 1 )
+rotation = -1.5708
+z_index = -9
+tile_set = SubResource( 90 )
+cell_size = Vector2( 2, 2 )
+format = 1
+tile_data = PoolIntArray( -9830146, 0, 0, -9699238, 0, 0, -4718471, 0, 0 )
+
+[node name="TileMap9" type="TileMap" parent="."]
+visible = false
+modulate = Color( 0.352941, 0.470588, 0.34902, 1 )
+rotation = -1.5708
+tile_set = SubResource( 90 )
+cell_size = Vector2( 2, 2 )
+format = 1
+tile_data = PoolIntArray( -41680744, 0, 0, -39780665, 0, 0, -39780664, 0, 0, -39780663, 0, 0, -39780662, 0, 0, -39780661, 0, 0, -39780660, 0, 0, -39125515, 0, 0, -38927998, 0, 0, -38011290, 0, 0, -38011289, 0, 0, -37945755, 0, 0, -36830699, 0, 0, -35062143, 0, 0, -35062142, 0, 0, -35062141, 0, 0, -34865776, 0, 0, -33030640, 0, 0, -31915490, 0, 0, -31064370, 0, 0, -30081442, 0, 0, -30081441, 0, 0, -28639797, 0, 0, -28639796, 0, 0, -28639795, 0, 0, -28639794, 0, 0, -28181304, 0, 0, -28181189, 0, 0, -28115653, 0, 0, -25820629, 0, 0, -24707585, 0, 0, -24576653, 0, 0, -24511117, 0, 0, -23462463, 0, 0, -23396927, 0, 0, -22545198, 0, 0, -22479661, 0, 0, -22479660, 0, 0, -21429622, 0, 0, -18873578, 0, 0, -18088631, 0, 0, -16841917, 0, 0, -11729994, 0, 0, -4062271, 0, 0, 3210965, 0, 0, 3408317, 0, 0, 4522154, 0, 0, 6094693, 0, 0, 7405187, 0, 0, 7405188, 0, 0, 7405189, 0, 0, 7405190, 0, 0, 7405191, 0, 0, 7405192, 0, 0, 7405193, 0, 0, 7405194, 0, 0, 7405195, 0, 0, 7405196, 0, 0, 7405197, 0, 0, 8847065, 0, 0, 9109712, 0, 0, 9109713, 0, 0, 9109714, 0, 0, 9109715, 0, 0, 9109716, 0, 0, 9109717, 0, 0, 9109718, 0, 0, 9109719, 0, 0, 9109720, 0, 0, 9109857, 0, 0, 9175245, 0, 0, 9175246, 0, 0, 9175247, 0, 0, 9305523, 0, 0, 9240779, 0, 0, 9240780, 0, 0, 9502243, 0, 0, 9633640, 0, 0, 10092521, 0, 0, 13435093, 0, 0, 13435094, 0, 0, 13435095, 0, 0, 13435096, 0, 0, 13435097, 0, 0, 13435098, 0, 0, 13435099, 0, 0, 13435100, 0, 0, 13762552, 0, 0, 13762553, 0, 0, 13762554, 0, 0, 13762555, 0, 0, 13762556, 0, 0, 13762557, 0, 0, 13762558, 0, 0, 13762559, 0, 0, 13697024, 0, 0, 13697025, 0, 0, 13697026, 0, 0, 15007148, 0, 0, 15007385, 0, 0, 15203865, 0, 0, 17038648, 0, 0, 17497895, 0, 0, 17563431, 0, 0, 17628967, 0, 0, 17694503, 0, 0, 17760039, 0, 0, 21823161, 0, 0, 23133715, 0, 0, 23199252, 0, 0, 23264789, 0, 0 )
+
+[node name="TileMap6" type="TileMap" parent="."]
+modulate = Color( 0.607843, 0.745098, 0.65098, 1 )
+rotation = -1.5708
+z_index = -2
+tile_set = SubResource( 91 )
+cell_size = Vector2( 2, 2 )
+format = 1
+tile_data = PoolIntArray( -34930897, 0, 0, -30801927, 0, 0, -23134214, 0, 0, -20054230, 0, 0, -17825812, 0, 0, -15335046, 0, 0, -13762777, 0, 0, -11207517, 0, 0, -6815771, 0, 0, -2752148, 0, 0, -1179768, 0, 0, -1179767, 0, 0, -1179766, 0, 0, -1179765, 0, 0, -1179764, 0, 0, -1179763, 0, 0, 2686108, 0, 0 )
+
+[node name="TileMap7" type="TileMap" parent="."]
+modulate = Color( 0.137255, 0.141176, 0.137255, 1 )
+self_modulate = Color( 0.913725, 0.980392, 0.921569, 1 )
+rotation = 1.5708
+z_index = -3
+tile_set = SubResource( 92 )
+cell_size = Vector2( 2, 2 )
+format = 1
+tile_data = PoolIntArray( 64638, 0, 0, 3932100, 0, 0, 10681988, 0, 0, 11992189, 0, 0, 30932492, 0, 0, 32439934, 0, 0 )
+
+[node name="AnimatedSprite18" type="AnimatedSprite" parent="."]
+modulate = Color( 0.443137, 0.701961, 0.407843, 1 )
+position = Vector2( -285.499, -81.9987 )
+scale = Vector2( 2.64752, 59.4595 )
+z_index = -106
+frames = SubResource( 93 )
+animation = "Water"
+playing = true
+
+[node name="Poles2" type="Node2D" parent="."]
+position = Vector2( 2647, -1671 )
+
+[node name="Pole" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -2274.16, -300.304 )
+rotation = 4.71239
+scale = Vector2( 0.902469, 1.28876 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss16" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -2256.47, -190.483 )
+scale = Vector2( 2.52285, 1.8714 )
+z_index = 40
+
+[node name="Pole5" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3155.16, -252.304 )
+rotation = 4.71239
+scale = Vector2( 0.902469, 1.28876 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss20" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3137.47, -142.483 )
+scale = Vector2( 2.52285, 1.8714 )
+z_index = 40
+
+[node name="Pole2" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -1576.16, -291.304 )
+rotation = 4.71239
+scale = Vector2( 0.902469, 1.28876 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss17" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -1529, -184 )
+scale = Vector2( 2.52285, 1.8714 )
+z_index = 40
+
+[node name="Pole3" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -2783.29, 2740.94 )
+rotation = -1.5708
+scale = Vector2( 0.575336, 0.901588 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss18" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -2772, 2803 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Pole4" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -2441, 2738 )
+rotation = 4.71239
+scale = Vector2( 0.575336, 0.901588 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss19" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -2434.75, 2798.51 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Pole6" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3056.03, 2340.45 )
+rotation = 4.71239
+scale = Vector2( 0.575336, 0.901588 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Pole7" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -2839, 1574 )
+rotation = -4.71239
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Pole8" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3145, 1771 )
+rotation = -1.5708
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss21" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3049.78, 2400.95 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Orb Green Boss22" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3136, 1804 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Pole9" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3382, 597 )
+rotation = -4.71239
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Pole10" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3651.31, 1010.45 )
+rotation = -1.5708
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss25" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3392, 553 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = -15
+
+[node name="Orb Green Boss26" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3642.31, 1043.45 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Pole13" type="Sprite" parent="Poles2"]
+visible = false
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -2949, -2155.55 )
+rotation = -4.71239
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Pole14" type="Sprite" parent="Poles2"]
+visible = false
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3218.31, -1742.1 )
+rotation = -1.5708
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss29" parent="Poles2" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -2959, -2199.55 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = -15
+
+[node name="Orb Green Boss30" parent="Poles2" instance=ExtResource( 16 )]
+visible = false
+position = Vector2( -3209.31, -1709.1 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Pole11" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3382, 597 )
+rotation = -4.71239
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Pole12" type="Sprite" parent="Poles2"]
+modulate = Color( 0.486275, 0.494118, 0.486275, 1 )
+position = Vector2( -3651.31, 1010.45 )
+rotation = -1.5708
+scale = Vector2( 0.305066, 0.553526 )
+z_index = 30
+texture = ExtResource( 17 )
+
+[node name="Orb Green Boss27" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3392, 553 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = -15
+
+[node name="Orb Green Boss31" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -2762, 231 )
+scale = Vector2( 0.368093, 0.667869 )
+z_index = -15
+
+[node name="Orb Green Boss32" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -2882, 477 )
+scale = Vector2( 0.368093, 0.667869 )
+z_index = -15
+
+[node name="Orb Green Boss33" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3049, -102 )
+scale = Vector2( 0.368093, 0.667869 )
+z_index = -15
+
+[node name="Orb Green Boss28" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -3642.31, 1043.45 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Orb Green Boss23" parent="Poles2" instance=ExtResource( 16 )]
+position = Vector2( -2851, 1536 )
+scale = Vector2( 0.99102, 0.880728 )
+z_index = 40
+
+[node name="Orb Green Boss24" parent="Poles2" instance=ExtResource( 16 )]
+modulate = Color( 0.266667, 0.47451, 0.258824, 1 )
+position = Vector2( 2870.53, -178.483 )
+scale = Vector2( 2.52285, 1.8714 )
+z_index = 40
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Poles2"]
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( -1193, 55.2415 )
+scale = Vector2( 0.933559, 2.53401 )
+z_index = -4
+frames = SubResource( 94 )
+animation = "Water"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite11" type="AnimatedSprite" parent="Poles2"]
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( -1192.75, -166.122 )
+scale = Vector2( 0.930743, 4.02373 )
+z_index = -4
+frames = SubResource( 95 )
+animation = "Water"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="Poles2"]
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( -2146, 50.6197 )
+scale = Vector2( 1.22523, 2.79406 )
+z_index = -4
+frames = SubResource( 94 )
+animation = "Water"
+frame = 1
+playing = true
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="Poles2"]
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( -2932.5, -96.5 )
+scale = Vector2( 2.63626, 12.4459 )
+z_index = -5
+frames = SubResource( 94 )
+animation = "Water"
+playing = true
+
+[node name="AnimatedSprite15" type="AnimatedSprite" parent="Poles2"]
+modulate = Color( 0.517647, 0.607843, 0.505882, 1 )
+position = Vector2( -2143.5, -153.244 )
+scale = Vector2( 1.2241, 3.61503 )
+z_index = -4
+frames = SubResource( 95 )
+animation = "Water"
+frame = 1
+playing = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -9, 1733, -17, 1744, 143, 1743, 144, 1709, 152, 1689, 170, 1682, 176, 1682, 179, 1631, 199, 1613, 212, 1605, 218, 1568, 202, 1552, 194, 1535, 201, 1510, 211, 1500, 209, 1468, 202, 1451, 187, 1442, 180, 1422, 174, 1398, 190, 1377, 192, 1366, 161, 1357, 141, 1350, 145, 1336, 141, 1312, 144, 729, 98, 729, 98, 712, -9, 711, -7, 609, -140, 610, -139, 200, -134, 37, -236, 38, -236, -43, -146, -43, -148, -129, -374, -130, -372, -461, -357, -461, -357, -768, -428, -799, -807, -799, -954, -773, -955, -892, -906, -892, -906, -878, -635, -880, -635, -891, -510, -892, -509, -875, -327, -876, -327, -855, -144, -850, -147, -937, -135, -923, -130, -838, -249, -825, -365, -822, -370, -860, -540, -860, -545, -885, -595, -890, -622, -862, -924, -861, -928, -815, -803, -823, -421, -831, -342, -779, -334, -449, -356, -443, -357, -162, -133, -139, -135, -27, -216, -23, -216, 2, -118, 20, -124, 212, -117, 556, 2, 574, 13, 655, 110, 666, 110, 706, 155, 702, 173, 805, 171, 1205, 260, 1497, 227, 1735, 74, 1789, -25, 1780 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -8, 1780, -14, 1739, 1, 1715, 0, 1691, -12, 1667, -21, 1653, -38, 1650, -58, 1650, -74, 1625, -87, 1607, -99, 1607, -108, 1619, -120, 1615, -135, 1578, -154, 1564, -174, 1571, -178, 1585, -202, 1589, -221, 1551, -234, 1535, -253, 1541, -266, 1556, -272, 1554, -279, 1532, -290, 1512, -297, 1483, -282, 1475, -263, 1469, -259, 1457, -267, 1441, -275, 1428, -256, 1412, -246, 1434, -237, 1437, -231, 1434, -226, 1419, -225, 1395, -212, 1416, -196, 1432, -178, 1433, -170, 1422, -165, 1389, -162, 1384, -153, 1386, -146, 1387, -138, 1397, -128, 1415, -124, 1431, -116, 1439, -93, 1444, -76, 1439, -65, 1430, -63, 1402, -62, 1393, -55, 1424, -51, 1459, -51, 1469, -30, 1468, -42, 1452, -47, 1414, -46, 1374, -42, 809, -184, 808, -179, 784, -317, 789, -315, 610, -322, 603, -326, 328, -545, 328, -545, 235, -448, 232, -448, 89, -554, 87, -555, -129, -560, -131, -559, -462, -1045, -457, -1044, -527, -968, -525, -968, -605, -1034, -608, -1036, -766, -1001, -766, -1000, -796, -1000, -891, -1018, -892, -1018, -1003, -762, -1003, -762, -940, -673, -938, -673, -930, -634, -929, -634, -914, -510, -917, -510, -931, -183, -931, -185, -998, -264, -999, -265, -1085, -223, -1086, -224, -1220, -269, -1219, -269, -1418, -262, -1418, -262, -1472, -372, -1471, -372, -1484, -435, -1484, -436, -1593, -393, -1593, -394, -1630, -420, -1630, -420, -1665, -377, -1665, -376, -1709, -417, -1710, -417, -1798, -387, -1798, -275, -1816, -65, -1816, -25, -1803, -20, -1770, -1, -1775, 52, -1760, 114, -1760, 214, -1768, 258, -1767, 288, -1759, 298, -1755, 336, -1759, 352, -1754, 389, -1756, 386, -1686, 372, -1680, -20, -1671, -21, -1628, -343, -1630, -341, -1593, -290, -1592, -290, -1532, -240, -1530, -240, -1521, -219, -1521, -218, -1472, -226, -1472, -226, -1419, -93, -1418, -93, -1339, -132, -1339, -132, -1265, -88, -1265, -91, -1041, -128, -1041, -129, -1000, -163, -1000, -163, -932, -145, -930, -135, -915, -119, -984, -97, -1004, -80, -1036, -77, -1104, -67, -1285, -100, -1299, -75, -1325, -77, -1433, -97, -1459, -188, -1451, -199, -1513, -215, -1552, -258, -1571, -276, -1611, -4, -1606, 21, -1657, 354, -1657, 385, -1670, 413, -1700, 414, -1767, 399, -1791, 77, -1798, -45, -1843, -359, -1834, -386, -1814, -438, -1832, -446, -1703, -415, -1694, -446, -1683, -447, -1650, -420, -1627, -455, -1620, -452, -1472, -396, -1459, -372, -1451, -276, -1453, -278, -1437, -300, -1403, -298, -1210, -258, -1168, -302, -1108, -292, -1010, -258, -960, -376, -960, -721, -966, -758, -1030, -1045, -1028, -1045, -882, -1012, -847, -1013, -811, -1073, -811, -1077, -727, -1066, -591, -1017, -578, -1030, -562, -1086, -563, -1080, -476, -1057, -416, -595, -416, -593, -141, -575, -101, -577, 103, -489, 126, -487, 186, -593, 191, -568, 344, -368, 359, -350, 404, -357, 608, -332, 629, -330, 813, -225, 806, -211, 851, -74, 860, -76, 1255, -74, 1387, -173, 1331, -225, 1356, -301, 1376, -323, 1432, -308, 1520, -234, 1614, -119, 1686, -45, 1751 )
+
+[node name="bRIDGE" type="Node2D" parent="."]
+position = Vector2( -225, -1824 )
+
+[node name="Platform2" type="Sprite" parent="bRIDGE"]
+position = Vector2( -347, 920 )
+scale = Vector2( 0.141892, 0.487805 )
+texture = ExtResource( 17 )
+
+[node name="Platform3" type="Sprite" parent="bRIDGE"]
+position = Vector2( 52.4205, 858.931 )
+rotation = 1.5708
+scale = Vector2( 0.0789848, 0.42489 )
+texture = ExtResource( 17 )
+
+[node name="Stairsss" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -749, 1054 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss2" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -749, 1045 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss3" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -749, 1036 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss4" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -749, 1027 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss5" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -749, 1017 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss6" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 1007.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss7" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 998.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss8" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 989.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss9" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 980.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss10" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 970.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss11" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 960.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss12" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 951.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss13" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -748.75, 941.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss14" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -749, 932 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss17" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -142.5, 226 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss18" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -142.5, 217 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss21" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 402 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss22" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 396 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss23" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 389 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss24" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 382 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss25" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 375 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss26" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 368 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss27" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 361 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss28" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -19, 354 )
+scale = Vector2( 0.36165, 0.730774 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss19" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -142.5, 207 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Stairsss20" type="Sprite" parent="bRIDGE"]
+modulate = Color( 0.670588, 0.92549, 0.627451, 1 )
+position = Vector2( -142.75, 197.5 )
+scale = Vector2( 0.529126, 1 )
+texture = ExtResource( 6 )
+
+[node name="Water Splash" type="Node2D" parent="."]
+z_index = 5
+
+[node name="AnimatedSprite21" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -369, 805 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite22" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -218, 942 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite23" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -375, 1095 )
+frames = SubResource( 96 )
+frame = 15
+playing = true
+
+[node name="AnimatedSprite24" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 352, 1145 )
+frames = SubResource( 96 )
+frame = 14
+playing = true
+
+[node name="AnimatedSprite25" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -59, 333 )
+z_index = 5
+frames = SubResource( 96 )
+frame = 15
+playing = true
+
+[node name="AnimatedSprite26" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -75, -6 )
+z_index = 5
+frames = SubResource( 96 )
+frame = 15
+playing = true
+
+[node name="AnimatedSprite27" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -638, 144 )
+z_index = 5
+frames = SubResource( 96 )
+frame = 14
+playing = true
+
+[node name="AnimatedSprite28" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1132, -640 )
+z_index = 5
+frames = SubResource( 96 )
+frame = 12
+playing = true
+
+[node name="AnimatedSprite29" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -803, -189 )
+frames = SubResource( 96 )
+frame = 17
+playing = true
+
+[node name="AnimatedSprite30" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -662, -74 )
+frames = SubResource( 96 )
+frame = 17
+playing = true
+
+[node name="AnimatedSprite31" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -311, -518 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite33" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( 52, -1319 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite34" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -503, -1640 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite36" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -324, -1338 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite38" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -1099, -1044 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite37" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -321, -1551 )
+frames = SubResource( 96 )
+frame = 15
+playing = true
+
+[node name="AnimatedSprite32" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -533, -1171 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="AnimatedSprite35" type="AnimatedSprite" parent="Water Splash"]
+modulate = Color( 0.843137, 0.921569, 0.854902, 1 )
+position = Vector2( -188, -1722 )
+frames = SubResource( 96 )
+frame = 16
+playing = true
+
+[node name="Entrance to Hallway to boss" type="Area2D" parent="."]
+position = Vector2( 376, -1760 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance to Hallway to boss"]
+position = Vector2( 0, 25 )
+shape = SubResource( 97 )
+
+[node name="Player2" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.733333, 0.819608, 0.705882, 1 )
+position = Vector2( 267, -1729 )
+
+[node name="Camera2D" parent="Player2" instance=ExtResource( 4 )]
+position = Vector2( -1, -121 )
+zoom = Vector2( 2.1, 2.1 )
+limit_left = -10000
+limit_top = -10000
+limit_right = 10000
+limit_bottom = 10000
+limit_smoothed = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_left = 4.0
+margin_top = 8.0
+margin_right = 62.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Water Splash2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+volume_db = -15.0
+autoplay = true
+
+[node name="Background Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -13.0
+autoplay = true
+
+[connection signal="body_entered" from="Exit to Green Swamp Castle" to="Exit to Green Swamp Castle" method="_on_Exit_to_Green_Swamp_Castle_body_entered"]
+[connection signal="body_entered" from="Entrance to Hallway to boss" to="Entrance to Hallway to boss" method="_on_Entrance_to_Hallway_to_boss_body_entered"]
+
+[editable path="Player2/Camera2D"]

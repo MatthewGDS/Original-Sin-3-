@@ -1,0 +1,330 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Lighting/light.png" type="Texture" id=1]
+[ext_resource path="res://Fallen Kingdom/House 3(2).png" type="Texture" id=2]
+[ext_resource path="res://Dirta.png" type="Texture" id=3]
+[ext_resource path="res://land grass.png" type="Texture" id=4]
+[ext_resource path="res://Fallen Kingdom/ddd.png" type="Texture" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "land grass.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 15, 15 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "land grass.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 18, 6, 9, 9 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 0
+1/autotile/bitmask_flags = [  ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 3, 3 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "land grass.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 30, 0, 12, 15 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 0
+2/autotile/bitmask_flags = [  ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 3, 3 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "land grass.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 30, 0, 12, 15 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[node name="House(2)" type="StaticBody2D"]
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0.878431, 0.698039, 0.698039, 1 )
+position = Vector2( -3.99999, 151 )
+scale = Vector2( 0.930946, 1 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.827451 )
+position = Vector2( -9, 160 )
+scale = Vector2( 0.936464, 1 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -7.5, 0 )
+scale = Vector2( 0.951613, 1 )
+texture = ExtResource( 2 )
+
+[node name="Light2D12" type="Light2D" parent="."]
+visible = false
+position = Vector2( 47, 38 )
+scale = Vector2( 0.165978, 0.140259 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D13" type="Light2D" parent="."]
+visible = false
+position = Vector2( 47, 66 )
+scale = Vector2( 0.165978, 0.140259 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D17" type="Light2D" parent="."]
+position = Vector2( -6, 134 )
+scale = Vector2( 0.178003, 0.26829 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0, 1 )
+
+[node name="Light2D19" type="Light2D" parent="."]
+position = Vector2( -59, 205 )
+scale = Vector2( 0.178003, 0.539034 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0, 1 )
+energy = 1.5
+
+[node name="Light2D18" type="Light2D" parent="."]
+position = Vector2( 53, 203 )
+scale = Vector2( 0.178003, 0.539034 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0, 1 )
+energy = 1.5
+
+[node name="Light2D20" type="Light2D" parent="."]
+position = Vector2( -218, 62 )
+rotation = 1.5708
+scale = Vector2( 0.178003, 0.411104 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0, 1 )
+energy = 1.5
+
+[node name="Light2D14" type="Light2D" parent="."]
+visible = false
+position = Vector2( -56, 44 )
+scale = Vector2( 0.165978, 0.140259 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D15" type="Light2D" parent="."]
+visible = false
+position = Vector2( -58, 68 )
+scale = Vector2( 0.165978, 0.140259 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -75, 29 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.431373, 0.211765, 1 )
+energy = 2.2
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( -73, 38 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( -78, 73 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0, 0, 1 )
+energy = 2.2
+
+[node name="Light2D4" type="Light2D" parent="."]
+position = Vector2( 29.8685, 33.5673 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.8, 0.705882, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D16" type="Light2D" parent="."]
+position = Vector2( -77, 74 )
+scale = Vector2( 0.0237066, 0.0344441 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.815686, 0.180392, 1 )
+energy = 2.2
+
+[node name="Light2D21" type="Light2D" parent="."]
+position = Vector2( -83, 63 )
+scale = Vector2( 0.0237066, 0.0344441 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.815686, 0.180392, 1 )
+energy = 2.2
+
+[node name="Light2D24" type="Light2D" parent="."]
+position = Vector2( -78, 63 )
+scale = Vector2( 0.0237066, 0.0344441 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.376471, 0, 1 )
+energy = 2.2
+
+[node name="Light2D22" type="Light2D" parent="."]
+position = Vector2( -77, 51 )
+scale = Vector2( 0.0237066, 0.0344441 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.815686, 0.180392, 1 )
+energy = 2.2
+
+[node name="Light2D23" type="Light2D" parent="."]
+position = Vector2( -83, 38 )
+scale = Vector2( 0.0237066, 0.0344441 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.815686, 0.180392, 1 )
+energy = 2.2
+
+[node name="Light2D5" type="Light2D" parent="."]
+position = Vector2( 31.8685, 42.5673 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D7" type="Light2D" parent="."]
+position = Vector2( -24.1315, -22.4327 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.00392157, 0.00392157, 1 )
+energy = 2.2
+
+[node name="Light2D8" type="Light2D" parent="."]
+position = Vector2( -13, -19 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D9" type="Light2D" parent="."]
+position = Vector2( -35, -20 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.662745, 0.427451, 0.219608, 1 )
+energy = 2.2
+
+[node name="Light2D6" type="Light2D" parent="."]
+position = Vector2( 26.8685, 75.5673 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.854902, 0.109804, 0.109804, 1 )
+energy = 2.2
+
+[node name="Light2D11" type="Light2D" parent="."]
+visible = false
+position = Vector2( 2.76792, 90.4617 )
+scale = Vector2( 0.0340831, 0.00106153 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D10" type="Light2D" parent="."]
+visible = false
+position = Vector2( 4, 90 )
+scale = Vector2( 0.205347, 0.00756835 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -141, 67, -130, 67, -129, 63, -105, 63, -104, 65, -104, 73, -105, 73, -105, 80, -103, 80, -104, 89, -105, 89, -105, 97, -95, 97, -93, 93, -66, 93, -66, 106, -68, 106, -68, 117, -56, 117, -56, 109, -59, 107, -58, 103, -56, 92, -54, 92, -52, 94, -46, 93, -47, 88, -14, 89, -14, 94, -9, 94, -5, 92, -2, 105, -2, 108, -3, 107, -4, 110, -4, 116, 8, 116, 7, 106, 6, 106, 6, 92, 33, 92, 33, 98, 44, 97, 45, 90, 43, 89, 43, 87, 90, 86, 90, 92, 102, 92, 102, 85, 100, 83, 115, 73, 122, 73, 121, 66, 120, 65, 120, 49, 130, 48, 134, 41, 133, 30, 131, 29, 130, 7, 125, -11, 125, -34, 126, -47, 121, -56, 116, -59, 104, -58, 99, -55, 97, -46, 96, -43, 94, -41, 93, -39, 91, -42, 87, -41, 87, -40, 82, -42, 81, -42, 79, -41, 77, -42, 73, -41, 68, -42, 64, -41, 61, -42, 57, -40, 53, -43, 50, -40, 46, -42, 46, -45, 44, -51, 46, -53, 45, -58, 47, -64, 43, -71, 47, -71, 47, -79, -10, -106, -9, -109, -31, -116, -51, -109, -52, -106, -88, -89, -108, -79, -109, -73, -106, -71, -105, -67, -108, -64, -104, -59, -107, -57, -107, -54, -105, -52, -107, -48, -107, -43, -105, -42, -106, -39, -105, -34, -108, -31, -142, -14, -143, -6, -141, 8, -143, 17, -141, 26, -141, 33, -139, 29, -138, 32, -140, 33, -140, 36, -139, 36, -139, 42, -140, 42, -140, 51, -139, 51, -138, 58, -141, 60, -141, 60 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( 45, 316, 52, 292, 54, 260, 49, 228, 56, 226, 53, 214, 54, 208, 57, 203, 49, 191, 54, 190, 37, 173, 48, 163, 52, 161, 56, 161, 58, 156, 56, 154, 56, 151, 58, 151, 60, 146, 58, 145, 60, 142, 62, 136, 84, 135, 102, 132, 122, 118, 137, 110, 142, 101, 147, 83, 154, 70, 154, 103, 149, 115, 146, 132, 136, 140, 117, 150, 100, 161, 96, 162, 72, 165, 60, 166, 52, 165, 50, 166, 42, 177, 52, 188, 55, 190, 54, 191, 50, 192, 58, 203, 55, 208, 54, 214, 57, 226, 56, 228, 50, 229, 54, 251, 55, 260, 53, 292, 46, 316 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 134, 42, 142, 49, 152, 64, 152, 71, 153, 69, 151, 61, 146, 52, 140, 46, 134, 41 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -80, 197, -80, 209, -77, 221, -68, 237, -53, 246, -33, 254, -7, 254, 13, 253, 16, 264, 17, 282, 15, 294, 9, 311, 8, 310, 14, 294, 16, 285, 11, 262, -5, 267, -23, 266, -44, 260, -61, 251, -74, 241, -80, 231, -83, 214, -83, 202, -82, 198, -75, 182, -64, 168, -57, 164, -74, 163, -90, 159, -96, 156, -99, 149, -111, 140, -117, 133, -133, 125, -156, 105, -163, 91, -165, 81, -164, 63, -159, 52, -161, 31, -156, 21, -150, 17, -147, 9, -142, 8, -142, 9, -147, 10, -148, 17, -153, 20, -158, 26, -160, 33, -158, 50, -158, 54, -162, 63, -163, 76, -163, 84, -156, 92, -131, 107, -99, 121, -102, 128, -96, 133, -55, 134, -12, 132, 11, 131, 18, 134, 18, 140, 11, 152, 7, 156, -7, 153, -23, 153, -38, 156, -53, 163, -60, 167, -72, 177, -78, 189 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 14, 188, 25, 182, 36, 173, 41, 178, 33, 185, 24, 191, 17, 194 )
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.576471, 0.556863, 0.556863, 0.901961 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 2, 2 )
+format = 1
+tile_data = PoolIntArray( 4849646, 3, 0, 4915188, 3, 0, 4915191, 0, 0, 4980724, 0, 0, 4980732, 0, 0, 4980733, 0, 0, 5046267, 3, 0, 5177322, 0, 0, 5177326, 0, 0, 5177328, 3, 0, 5242859, 3, 0, 5242864, 3, 0, 5242873, 3, 0, 5308391, 3, 0, 5308405, 3, 0, 5570528, 3, 0, 5570537, 3, 0, 5636066, 0, 0, 5832671, 0, 0, 5898212, 0, 0, 6029277, 3, 0, 6029279, 0, 0, 6160346, 3, 0, 6160358, 0, 0, 6225889, 0, 0, 6291425, 3, 0, 6356955, 0, 0, 6356968, 0, 0, 6422499, 0, 0, 6553559, 3, 0, 6553575, 3, 0, 6553580, 3, 0, 6619103, 0, 0, 6684634, 0, 0, 6684645, 0, 0, 6815724, 0, 0, 6815730, 3, 0, 6881251, 0, 0, 7012314, 3, 0, 7012320, 0, 0, 7012328, 0, 0, 7012329, 0, 0, 7077869, 3, 0, 7077870, 3, 0, 7077874, 3, 0, 7077875, 0, 0, 7077879, 3, 0, 7208924, 0, 0, 7208941, 0, 0, 7274461, 3, 0, 7274467, 3, 0, 7274474, 3, 0, 7340014, 3, 0, 7340026, 3, 0, 7274496, 3, 0, 7405539, 3, 0, 7405540, 3, 0, 7405556, 3, 0, 7471075, 3, 0, 7471092, 3, 0, 7602152, 3, 0, 7667693, 3, 0, 7667694, 3, 0, 7667706, 3, 0, 7733237, 3, 0, 7733247, 3, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -33, -42, 2, -41, 2, -39, -30, -39 )

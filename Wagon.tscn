@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Lighting/light.png" type="Texture" id=1]
+[ext_resource path="res://Fallen Kingdom/Wagon.png" type="Texture" id=2]
+
+[node name="Wagon" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.592157, 0.376471, 0.376471, 1 )
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -1, 24 )
+scale = Vector2( 0.165978, 0.140259 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PoolVector2Array( -41, 38, -35, 36, -32, 28, -27, 28, -23, 35, -18, 39, -10, 39, -5, 33, -3, 36, 4, 39, 12, 36, 15, 28, 21, 28, 23, 34, 28, 39, 36, 38, 40, 34, 42, 28, 41, 24, 52, 24, 51, 19, 46, 19, 44, 15, 45, 3, 49, -6, 49, -17, 48, -26, 40, -37, 11, -39, -22, -37, -46, -34, -52, -24, -56, -13, -55, 4, -50, 16, -52, 19, -53, 24, -54, 31, -50, 36, -45, 38 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 4, 43 )
+polygon = PoolVector2Array( -33, -42, 2, -41, 2, -39, -30, -39 )

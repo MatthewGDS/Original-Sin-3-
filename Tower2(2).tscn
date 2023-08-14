@@ -1,0 +1,265 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Lighting/light.png" type="Texture" id=1]
+[ext_resource path="res://Fallen Kingdom/Tower.png" type="Texture" id=2]
+[ext_resource path="res://Fallen Kingdom/d.png" type="Texture" id=3]
+
+[node name="House(2)" type="StaticBody2D"]
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -17, 128 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.815686, 0.662745, 0.662745, 1 )
+position = Vector2( 0, -1 )
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 0.8685, 43.069 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.8, 0.705882, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D2" type="Light2D" parent="."]
+visible = false
+position = Vector2( 0.868507, 28.069 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( 9.86851, 55.069 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D4" type="Light2D" parent="."]
+visible = false
+position = Vector2( 2.8685, -14.931 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.8, 0.705882, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D5" type="Light2D" parent="."]
+position = Vector2( 2, -24 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D6" type="Light2D" parent="."]
+position = Vector2( 9, -4 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D7" type="Light2D" parent="."]
+position = Vector2( -11, -20 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.8, 0.705882, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D8" type="Light2D" parent="."]
+position = Vector2( -19.1315, -28.9312 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D9" type="Light2D" parent="."]
+visible = false
+position = Vector2( -10.1315, -1.93102 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D10" type="Light2D" parent="."]
+position = Vector2( 30.8685, -12.8622 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.8, 0.705882, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D11" type="Light2D" parent="."]
+position = Vector2( 30.8685, -27.8622 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.470588, 0, 1 )
+energy = 2.2
+
+[node name="Light2D12" type="Light2D" parent="."]
+visible = false
+position = Vector2( 36, -3.93102 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+energy = 2.2
+
+[node name="Light2D13" type="Light2D" parent="."]
+position = Vector2( -18, -40 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.262745, 0.239216, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D14" type="Light2D" parent="."]
+position = Vector2( -14, -44 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.447059, 0.337255, 0.239216, 1 )
+energy = 2.2
+
+[node name="Light2D15" type="Light2D" parent="."]
+position = Vector2( -7, -36 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+energy = 2.2
+
+[node name="Light2D16" type="Light2D" parent="."]
+position = Vector2( 24, -35 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.262745, 0.239216, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D17" type="Light2D" parent="."]
+position = Vector2( 26, -43 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0.0117647, 1 )
+energy = 2.2
+
+[node name="Light2D18" type="Light2D" parent="."]
+modulate = Color( 0.992157, 1, 0, 1 )
+position = Vector2( 32, -35 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+energy = 2.2
+
+[node name="Light2D19" type="Light2D" parent="."]
+visible = false
+position = Vector2( 80.8685, 119.207 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.262745, 0.239216, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D20" type="Light2D" parent="."]
+visible = false
+position = Vector2( 80, 107.069 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0.0117647, 1 )
+energy = 2.2
+
+[node name="Light2D21" type="Light2D" parent="."]
+visible = false
+modulate = Color( 0.992157, 1, 0, 1 )
+position = Vector2( 85, 129.069 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+energy = 2.2
+
+[node name="Light2D22" type="Light2D" parent="."]
+position = Vector2( 31.8685, 88.2065 )
+scale = Vector2( 0.0566484, 0.0558893 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.262745, 0.239216, 0.0980392, 1 )
+energy = 2.2
+
+[node name="Light2D24" type="Light2D" parent="."]
+modulate = Color( 0.992157, 1, 0, 1 )
+position = Vector2( 42, 86 )
+scale = Vector2( 0.0449297, 0.136057 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+energy = 2.2
+
+[node name="Light2D23" type="Light2D" parent="."]
+position = Vector2( -21, -46 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0.0117647, 1 )
+energy = 2.2
+
+[node name="Light2D25" type="Light2D" parent="."]
+position = Vector2( 4, 89 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0.0117647, 1 )
+energy = 2.2
+
+[node name="Light2D26" type="Light2D" parent="."]
+position = Vector2( 8.13776, 83.661 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0.0117647, 1 )
+energy = 2.2
+
+[node name="Light2D27" type="Light2D" parent="."]
+position = Vector2( 11, 89 )
+scale = Vector2( 0.0449297, 0.0344049 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 1, 0.937255, 0.0117647, 1 )
+energy = 2.2
+
+[node name="Light2D28" type="Light2D" parent="."]
+visible = false
+modulate = Color( 1, 0.513726, 0, 1 )
+position = Vector2( 145, 86 )
+scale = Vector2( 0.166285, 0.129041 )
+texture = ExtResource( 1 )
+offset = Vector2( -147.692, -112 )
+color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+energy = 2.2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+z_index = 12
+polygon = PoolVector2Array( -46, 147, -37, 151, -19, 158, 24, 157, 48, 146, 39, 115, 39, 77, -38, 80, -39, 117, -46, 146 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 19, 174 )
+polygon = PoolVector2Array( -33, -42, 2, -41, 2, -39, -30, -39 )
